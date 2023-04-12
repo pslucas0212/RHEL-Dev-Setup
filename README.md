@@ -94,6 +94,11 @@ Built:        Fri Jan 13 07:45:32 2023
 OS/Arch:      linux/amd64
 ```
 
+If you want to update the container-tools module when a new version is released, run the dnf update command.
+```
+$ sudo dnf module update -y container-tools:rhel8
+```
+
 ### Test our Podman Installation
 We will use the latest RHEL 8.7 Universal Base Image (UBI) container for out test.
 
