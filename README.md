@@ -11,27 +11,27 @@ For this lab environment I chose dev01.example.com for the hostname of the serve
 
 Check hostname and local DNS resolution.  Use dig to test forward and reverse lookup of the server hosting Satellite.  If the Satellite hostname is not available from DNS, the initial installation will fail.    
 ```
-# ping -c3 localhost
-# ping -c3 dev01.example.com -f
-# dig dev01.example.com +short
-# dig -x 10.1.10.254 +short
+$ ping -c3 localhost
+$ ping -c3 dev01.example.com -f
+$ dig dev01.example.com +short
+$ dig -x 10.1.10.254 +short
 ```   
 We will set the hostname on the server to avoid any future issues.
 ```
-# hostnamectl set-hostname dev01.example.com
+$ hostnamectl set-hostname dev01.example.com
 ```
 
 Verify the time server with chrony.  I have a local time server that my systems use for synching time.  Type the following command to check the the time synch status.  
 ```
-# chronyc sources -v
+$ chronyc sources -v
 ```
 Register Satellite Server to Red Hat Subscription Management service.
 ```
-# sudo subscription-manager register --org=<org id> --activationkey=<activation key>
+$ sudo subscription-manager register --org=<org id> --activationkey=<activation key>
 ```
 You can verify the registration with the following command.
 ```
-# sudo subscription-manager status
+$ sudo subscription-manager status
 ```    
 #### Configure and enable repositories  
 
@@ -39,34 +39,41 @@ With SCA, we still need to enable relevant repositories for our RHEL instances. 
 
 Disable all repos.
 ```    
-# sudo subscription-manager repos --disable "*"
+$ sudo subscription-manager repos --disable "*"
 ```       
 Enable the following repositories.
 ```    
-# sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
+$ sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms \
 --enable=rhel-8-for-x86_64-appstream-rpms
 ```
 Verify that repositories are enabled.
 ```
-# sudo subscription-manager repos --list-enabled
+$ sudo subscription-manager repos --list-enabled
 ```
 
-Update all packages.  This may take a few minutes to complete.
+Update all packages.  This may take a few minutes to complete.  Let's make sure tthe container-tools module which contains podman is up to date.
 ```
-# sudo dnf update
+$ sudo dnf update
 ```
 Install SOS package on base OS for initial systems analysis in case you need to collect problem determination for any system related issues.  
 ```
-# sudo dnf install sos
+$ sudo dnf install sos
 ```
  I would also recommend registering this server to Insights.  
 ```
-# sudo insights-client --register
+$ sudo insights-client --register
 ```
 ### Installing Podman on RHEL 8.7
+Let's verify that the container-tools module is available on our RHEL instance
+```
+$ dnf module list | grep container-tools
+container-tools      rhel8 [d][e]    common [d]                               Most recent (rolling) versions of podman, buildah, skopeo, runc, conmon, runc, conmon, CRIU, Udica, etc as well as dependencies such as container-selinux built and tested together, and updated as frequently as every 12 weeks.         
+...
+container-tools      4.0             common [d]                               Stable versions of podman 4.0, buildah 1.24, skopeo 1.6, runc, conmon, CRIU, Udica, etc as well as dependencies such as container-selinux built and tested together, and supported as documented on the Application Stream lifecycle page
+```
 Enable the client-tools module which has the podman blah, blah, blah.
 ```
-# dnf module enable satellite:el8
+$ dnf module enable satellite:el8
 ```
 
 ### Appendix
