@@ -80,6 +80,20 @@ Check the Podman version installed
 $ podman --version
 podman version 4.2.0
 ```
+For longer Podman version information
+```
+$ podman --version
+podman version 4.2.0
+[pslucas@dev01 ~]$ podman version
+Client:       Podman Engine
+Version:      4.2.0
+API Version:  4.2.0
+Go Version:   go1.18.4
+Built:        Fri Jan 13 07:45:32 2023
+OS/Arch:      linux/amd64
+```
+
+
 
 ### Appendix
 - [How do I install podman in RHEL 8 or 9?](https://access.redhat.com/solutions/3650231)
