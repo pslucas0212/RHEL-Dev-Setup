@@ -61,7 +61,7 @@ Install SOS package on base OS for initial systems analysis in case you need to 
 ```
  I would also recommend registering this server to Insights.  
 ```
-# insights-client --register
+# sudo insights-client --register
 ```
 ### Installing Podman on RHEL 8.7
 Enable the client-tools module which has the podman blah, blah, blah.
