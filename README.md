@@ -93,7 +93,11 @@ Go Version:   go1.18.4
 Built:        Fri Jan 13 07:45:32 2023
 OS/Arch:      linux/amd64
 ```
-
+Use rpm -q podman for detailed release number.
+```
+$ rpm -q podman
+podman-4.2.0-8.module+el8.7.0+17824+66a0202b.x86_64
+```
 If you want to update the container-tools module when a new version is released, run the dnf update command.
 ```
 $ sudo dnf module update -y container-tools:rhel8
@@ -106,7 +110,9 @@ Go to the [Certified container images](https://catalog.redhat.com/software/conta
 
 ![Search on UBI](images/dev01.png)
 
-Click on the Red Hat Universal Base Image 8 tile
+Click on the Red Hat Universal Base Image 8 tile with the ubi8/ubi for the command to download the ubi container to your local image repository.
+
+
 
 
 ### Appendix
