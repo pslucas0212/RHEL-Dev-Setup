@@ -83,7 +83,7 @@ podman version 4.2.0
 ```
 For longer Podman version information
 ```
-$ podman --version
+$ podman version
 podman version 4.2.0
 [pslucas@dev01 ~]$ podman version
 Client:       Podman Engine
