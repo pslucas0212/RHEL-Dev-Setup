@@ -71,9 +71,14 @@ container-tools      rhel8 [d][e]    common [d]                               Mo
 ...
 container-tools      4.0             common [d]                               Stable versions of podman 4.0, buildah 1.24, skopeo 1.6, runc, conmon, CRIU, Udica, etc as well as dependencies such as container-selinux built and tested together, and supported as documented on the Application Stream lifecycle page
 ```
-Enable the client-tools module which has the podman blah, blah, blah.
+Install the client-tools module which includes podman.  We chose container-tools:rhel8 to get the latest rolling updates of the container tools
 ```
-$ dnf module enable satellite:el8
+$ sudo dnf module install -y container-tools:rhel8
+```
+Check the Podman version installed
+```
+$ podman --version
+podman version 4.2.0
 ```
 
 ### Appendix
