@@ -96,9 +96,11 @@ OS/Arch:      linux/amd64
 ### Test our Podman Installation
 We will use the latest RHEL 8.7 Universal Base Image (UBI) container for out test.
 
-Go to the [Certified container images](https://catalog.redhat.com/software/containers/search?q=ubi&p=1) page and in the Filters text field type "ubi" and click the red Search button.
+Go to the [Certified container images](https://catalog.redhat.com/software/containers/search?q=ubi&p=1) page and in the Filters text field type "ubi8" and click the red Search button.
 
 ![Search on UBI](images/dev01.png)
+
+Click on the Red Hat Universal Base Image 8 tile
 
 
 ### Appendix
