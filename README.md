@@ -4,6 +4,7 @@ Last update: 12 April 2023
 
 ### Pre-Reqs
 
+For this example we will be working with RHEL 8.x 
 
 Create a VM for the developer instance and install RHEL 8.7.  The VM was sized with 2 vCPUS, 8GB RAM and 120GB "local" drive.  Note: For this example I have enabled Simple Content Access (SCA) on the Red Hat Customer portal and do not need to attach a subscription to the RHEL or Satellite repositories.  After you have created and started the RHEL 8.7 VM, we will ssh to the RHEL VM and work from the command line.
 
