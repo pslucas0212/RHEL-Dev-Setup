@@ -1,6 +1,6 @@
 # Documentation for RHEL Developer Instance Setup
 
-Last update: 12 April 2023
+Last update: 13 April 2023
 
 ### Pre-Reqs
 
@@ -106,13 +106,17 @@ $ sudo dnf module update -y container-tools:rhel8
 ### Test our Podman Installation
 We will use the latest RHEL 8.7 Universal Base Image (UBI) container for out test.
 
-Go to the [Certified container images](https://catalog.redhat.com/software/containers/search?q=ubi&p=1) page and in the Filters text field type "ubi8" and click the red Search button.
+Go to the [Certified container images](https://catalog.redhat.com/software/containers/search?q=ubi&p=1) page and in the Filters text field type "ubi8" and click the red Search button.  Next click on the Red Hat Universal Base Image 8 tile with the ubi8/ubi.
 
 ![Search on UBI](images/dev01.png)
 
-Click on the Red Hat Universal Base Image 8 tile with the ubi8/ubi for the command to download the ubi container to your local image repository.
+On the Home > Containers > Browse Containers > Red Hat Universal Base Imag 8 page you will detail information about the container image.  Click on the Get this image tab.
 
+![Get this imabe](images/dev02.png)
 
+Now click on the Using Red Hat login tab to get the comamands to download the image using podman.  You will need a Red Hat customer account to login to registry.redhat.io.  If you need to setup an account, see this article [Red Hat Container Registry Authentication](https://access.redhat.com/RegistryAuthentication)
+
+![Get this imabe](images/dev03.png)
 
 
 ### Appendix
