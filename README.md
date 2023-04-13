@@ -137,7 +137,7 @@ Storing signatures
 768688a189716f9aef8d33a9eef4209f57dc2e66e9cb5fc3b8862940f314b9bc
 ```
 
-To view your recently downloaded image use podman images
+To view your recently downloaded image use the podman images command.
 ```
 $ podman images
 REPOSITORY                   TAG         IMAGE ID      CREATED      SIZE
