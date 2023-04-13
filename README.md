@@ -144,7 +144,7 @@ REPOSITORY                   TAG         IMAGE ID      CREATED      SIZE
 registry.redhat.io/ubi8/ubi  8.7-1112    768688a18971  2 weeks ago  214 MB
 ```
 
-Let's test our podman installation by starting up a container
+Let's test our podman installation by starting up a container.  In this example we are telling the container that we want to run an interactive terminal session and remove the container when it shuts down.
 ```
 $ podman run -it --rm registry.redhat.io/ubi8/ubi sh
 Trying to pull registry.redhat.io/ubi8/ubi:latest...
