@@ -118,7 +118,46 @@ Now click on the Using Red Hat login tab to get the comamands to download the im
 
 ![Get this imabe](images/dev03.png)
 
+Login in to registry.redhat.io
+```
+$ podman login registry.redhat.io -u youruserid -p somepassword
+Login Succeeded!
+```
 
+Download the image to the podman registry
+```
+$ podman pull registry.redhat.io/ubi8/ubi:8.7-1112
+Trying to pull registry.redhat.io/ubi8/ubi:8.7-1112...
+Getting image source signatures
+Checking if image destination supports signatures
+Copying blob 6208c5a2e205 done  
+Copying config 768688a189 done  
+Writing manifest to image destination
+Storing signatures
+768688a189716f9aef8d33a9eef4209f57dc2e66e9cb5fc3b8862940f314b9bc
+```
+
+To view your recently downloaded image use podman images
+```
+$ podman images
+REPOSITORY                   TAG         IMAGE ID      CREATED      SIZE
+registry.redhat.io/ubi8/ubi  8.7-1112    768688a18971  2 weeks ago  214 MB
+```
+
+Let's test our podman installation by starting up a container
+```
+$ podman run -it --rm registry.redhat.io/ubi8/ubi sh
+Trying to pull registry.redhat.io/ubi8/ubi:latest...
+Getting image source signatures
+Checking if image destination supports signatures
+Copying blob 6208c5a2e205 skipped: already exists  
+Copying config 768688a189 done  
+Writing manifest to image destination
+Storing signatures
+sh-4.4# cat /etc/redhat-release 
+Red Hat Enterprise Linux release 8.7 (Ootpa)
+sh-4.4# exit
+```
 ### Appendix
 - [How do I install podman in RHEL 8 or 9?](https://access.redhat.com/solutions/3650231)
 - [Universal Base Images (UBI): Images, repositories, packages, and source code](https://access.redhat.com/articles/4238681)
