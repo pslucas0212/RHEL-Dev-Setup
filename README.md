@@ -117,5 +117,6 @@ Click on the Red Hat Universal Base Image 8 tile with the ubi8/ubi for the comma
 
 ### Appendix
 - [How do I install podman in RHEL 8 or 9?](https://access.redhat.com/solutions/3650231)
-- [Universal Base Images (UBI): Images, repositories, packages, and source code](https://access.redhat.com/articles/4238681)'
+- [Universal Base Images (UBI): Images, repositories, packages, and source code](https://access.redhat.com/articles/4238681)
 - [Introducing the Red Hat Universal Base Image](https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image)
+- [Red Hat Container Registry Authentication](https://access.redhat.com/RegistryAuthentication)
