@@ -54,7 +54,7 @@ $ sudo subscription-manager repos --list-enabled
 
 Update all packages.  This may take a few minutes to complete.  Let's make sure tthe container-tools module which contains podman is up to date.
 ```
-$ sudo dnf update
+$ sudo dnf -y update
 ```
 Install SOS package on base OS for initial systems analysis in case you need to collect problem determination for any system related issues.  
 ```
