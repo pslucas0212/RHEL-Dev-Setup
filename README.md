@@ -26,7 +26,7 @@ Verify the time server with chrony.  I have a local time server that my systems 
 ```
 $ chronyc sources -v
 ```
-Register Satellite Server to Red Hat Subscription Management service.
+Register the dev Server to Red Hat Subscription Management service.
 ```
 $ sudo subscription-manager register --org=<org id> --activationkey=<activation key>
 ```
@@ -112,7 +112,7 @@ Go to the [Certified container images](https://catalog.redhat.com/software/conta
 
 On the Home > Containers > Browse Containers > Red Hat Universal Base Imag 8 page you will detail information about the container image.  Click on the Get this image tab.
 
-![Get this imabe](images/dev02.png)
+![Get this image tab](images/dev02.png)
 
 Now click on the Using Red Hat login tab to get the comamands to download the image using podman.  You will need a Red Hat customer account to login to registry.redhat.io.  If you need to setup an account, see this article [Red Hat Container Registry Authentication](https://access.redhat.com/RegistryAuthentication)
 
